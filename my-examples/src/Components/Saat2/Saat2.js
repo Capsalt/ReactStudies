@@ -1,7 +1,7 @@
-import "./saat.css";
+import "./saat2.css";
 import moment from "moment";
 
-const Saat = () => {
+const Saat2 = (props) => {
 
   const dateTime = moment();
   const timeStr = dateTime.format("HH:mm");
@@ -16,7 +16,7 @@ const Saat = () => {
   else message = "Night";
 
     return (
-    <div className = "saat-container">
+    <div className = "saat-container" style={{color: props.yaziRengi, backgroundColor: props.zeminRengi}}>
         <div className = "saat">{timeStr}</div>
         <div>
             <div className = "tarih">{dateStr}</div>
@@ -27,4 +27,4 @@ const Saat = () => {
     );
 }
 
-export default Saat;
+export default Saat2;
